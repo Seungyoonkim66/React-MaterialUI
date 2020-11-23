@@ -2,26 +2,40 @@ import React from 'react';
 
 import Divider from '@material-ui/core/Divider';
 
-export default function ProjectsDesc({ title , name , period , contribution }) {
+export default function ProjectsDesc({ title, name, period, contribution, desc, extraTitle, extraContent, img }) {
 
     return (
-        <div className='projects-content-div' style={{ color: '#555555' }}>
-                        <p>{title}</p>
-                        <Divider />
-                        <div className='projects-content-div-div'>
-                            <div className='desc'>
-                                <div className='desc-title'>
-                                    <p>프로젝트 명</p>
-                                    <p>프로젝트 기간</p>
-                                    <p>프로젝트 기여도</p>
-                                </div>
-                                <div className='desc-content'>
-                                    <p>{name}</p>
-                                    <p>{period}</p>
-                                    <p>{contribution}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div className='projects-content-div'>
+            <p>{title}</p>
+            <Divider />
+            <div className='projects-content-div-table'>
+                <table> 
+                    <tr>
+                        <th>Project Title</th>
+                        <td>{name}</td>
+                    </tr>
+                    <tr>
+                        <th>Project Period</th>
+                        <td>{period}</td>
+                    </tr>
+                    <tr>
+                        <th>Contriubution</th>
+                        <td>{contribution}</td>
+                    </tr>
+                    <tr>
+                        <th>{extraTitle}</th>
+                        <td><a href={extraContent} target='blank'>{extraContent}</a></td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+            <Divider />
+
+            <div className='projects-content-div-desc'> 
+                <p>{desc}</p>
+                <img src={img} alt='img' style={{width: '60%', display: 'block', margin: 'auto'}}/>
+            </div>
+        </div>
     );
 }
