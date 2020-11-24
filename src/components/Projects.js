@@ -107,6 +107,8 @@ export default function Projects() {
                         desc='React를 활용하여 KPMG의 디지털 혁신 부서인 Lighthouse center 부서의 포트폴리오 사이트를 제작하였습니다. Lighthouse에서 개발한 소프트웨어를 외부에 공개하기 위한 목적의 사이트로 HTML, CSS, JSX를 기반으로 하는 React 웹 프레임워크를 활용하여 프론트엔드 개발을 수행했습니다. Landing 페이지를 통해서 KPMG의 글로벌 사이트인 Insights Center 소개 페이지, Lighthouse 소개 페이지, 개발한 솔루션을 전시하는 페이지로 이동할 수 있게 제작하였습니다.'
                         desc2='프로젝트를 진행할 당시 Lighthouse 팀은 전원이 백엔드 개발자였기 때문에 레이아웃 구상, 사이트 맵 구상, 디자인, 코드 작성 전과정을 단독으로 진행하였습니다. 또한 백엔드와 병합 및 코드 결합을 위해 GitLab을 사용하였습니다.'
                         img={LighthousePortfolio}
+                        btnTitle='Landing page sample'
+                        isButtonShown={true}
                     />
                 </TabPanel>
                 <TabPanel value={value} index={1} style={{ width: '90%' }}>

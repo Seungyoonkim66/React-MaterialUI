@@ -3,8 +3,8 @@ import BackDrop from './BackDrop';
 import Divider from '@material-ui/core/Divider';
 import sample from '../static/empty.svg';
 
-export default function ProjectsDesc({ title, name, period, contribution, desc, desc2, extraTitle, extraContent, img, btnTitle }) {
-
+export default function ProjectsDesc({ title, name, period, contribution, desc, desc2, extraTitle, extraContent, img, btnTitle, isButtonShown }) {
+    const isShown = isButtonShown; 
     return (
         <div className='projects-content-div'>
             <p>{title}</p>
@@ -33,7 +33,8 @@ export default function ProjectsDesc({ title, name, period, contribution, desc, 
             <div className='projects-content-div-desc'>
                 <p>{desc}</p>
                 <p>{desc2}</p>
-                <BackDrop img={img} btnTitle={btnTitle} isButtonShown='1'/>
+                {isShown ? <BackDrop img={img} btnTitle={btnTitle}/> : null}
+                {/* <BackDrop img={img} btnTitle={btnTitle} isButtonShown={true}/> */}
                 {/* <img src={img} alt='img' style={{width: '90%', display: 'block', margin: 'auto'}}/> */}
             </div>
         </div>
