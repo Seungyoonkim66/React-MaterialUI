@@ -2,7 +2,7 @@ import React from 'react';
 
 import Divider from '@material-ui/core/Divider';
 
-export default function ProjectsDesc({ title, name, period, contribution, desc, extraTitle, extraContent, img }) {
+export default function ProjectsDesc({ title, name, period, contribution, desc, desc2, extraTitle, extraContent, img }) {
 
     return (
         <div className='projects-content-div'>
@@ -34,7 +34,8 @@ export default function ProjectsDesc({ title, name, period, contribution, desc, 
 
             <div className='projects-content-div-desc'> 
                 <p>{desc}</p>
-                <img src={img} alt='img' style={{width: '60%', display: 'block', margin: 'auto'}}/>
+                <p>{desc2}</p>
+                <img src={img} alt='img' style={{width: '90%', display: 'block', margin: 'auto'}}/>
             </div>
         </div>
     );
