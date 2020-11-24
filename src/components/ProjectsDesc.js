@@ -19,7 +19,7 @@ export default function ProjectsDesc({ title, name, period, contribution, desc, 
                         <td>{period}</td>
                     </tr>
                     <tr>
-                        <th>Contriubution</th>
+                        <th>Contribution</th>
                         <td>{contribution}</td>
                     </tr>
                     <tr>

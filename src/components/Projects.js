@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ProjectsDesc from './ProjectsDesc';
 
+import empty from '../static/empty.svg';
 import kcc from '../static/KCC.png';
 import NutritionCart from '../static/NutritionCart.png';
 import LighthousePortfolio from '../static/lighthouseportfolio.png';
@@ -14,6 +15,8 @@ import taxocr from '../static/taxocr.png';
 import antix from '../static/antix.png';
 import TwitchR from '../static/TwitchR.png';
 import paasta from '../static/paasta.png';
+import kingomarket from '../static/kingomarket.png';
+import skkulibrary from '../static/skkulibrary.png';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -85,17 +88,19 @@ export default function Projects() {
                     <Tab label="TAX-OCR" {...a11yProps(1)} />
                     <Tab label="KSC2020" {...a11yProps(2)} />
                     <Tab label="KCC2020" {...a11yProps(3)} />
-                    <Tab label="Nutrition Cart" {...a11yProps(4)} />
-                    <Tab label="ANTI-X" {...a11yProps(5)} />
-                    <Tab label="TwitchR" {...a11yProps(6)} />
-                    <Tab label="누리자 복지" {...a11yProps(7)} />
-                    <Tab label="Kingo Market" {...a11yProps(8)} />
+                    <Tab label="Virtual Memory Management" {...a11yProps(4)} />
+                    <Tab label="Nutrition Cart" {...a11yProps(5)} />
+                    <Tab label="ANTI-X" {...a11yProps(6)} />
+                    <Tab label="TwitchR" {...a11yProps(7)} />
+                    <Tab label="누리자 복지" {...a11yProps(8)} />
+                    <Tab label="Kingo Market" {...a11yProps(9)} />
+                    <Tab label="SKKU Library" {...a11yProps(10)} />
                 </Tabs>
                 <TabPanel value={value} index={0} style={{ width: '90%' }}>
                     <ProjectsDesc
                         title='KPMG Lighthouse Portfolio'
                         name='React 기반 KPMG Lighthouse 포트폴리오'
-                        period='2020.10-2020.12'
+                        period='2020.10 - 2020.12'
                         contribution='디자인 및 코드 작성'
                         extraTitle='GitHub URL'
                         extraContent='https://github.com/Seungyoonkim66/React-KPMG'
@@ -108,23 +113,26 @@ export default function Projects() {
                     <ProjectsDesc
                         title='KPMG TAX-OCR Web'
                         name='React 기반 OCR 웹사이트'
-                        period='2020.10-2020.12'
+                        period='2020.10 - 2020.12'
                         contribution='디자인 및 코드 작성'
                         extraTitle='GitHub URL'
                         extraContent='https://github.com/Seungyoonkim66/React-KPMG'
-                        desc='React를 활용하여 KPMG Lighthouse에서 개발한 OCR 프로그램의 프론트엔드를 개발하였습니다. HTML, CSS, JSX를 기반으로 하는 React 웹 프레임워크를 활용하여 개발하였으며 Material-UI 오픈소스를 커스터마이징하여 사용하였습니다. 팀에서 기존에 개발해두었던 tax 관련 OCR 프로그램의 고객용 데모 사이트를 제작하기 위해 프로그램이 제공하는 각 기능의 사용 가이드와 프로그램 다운로드 버튼을 제공하는 One-page 웹사이트를 개발하였습니다.' 
+                        desc='React를 활용하여 KPMG Lighthouse에서 개발한 OCR 프로그램의 프론트엔드를 개발하였습니다. HTML, CSS, JSX를 기반으로 하는 React 웹 프레임워크를 활용하여 개발하였으며 Material-UI 오픈소스를 커스터마이징하여 사용하였습니다. 팀에서 기존에 개발해두었던 tax 관련 OCR 프로그램의 고객용 데모 사이트를 제작하기 위해 프로그램이 제공하는 각 기능의 사용 가이드와 프로그램 다운로드 버튼을 제공하는 One-page 웹사이트를 개발하였습니다.'
                         desc2='Lighthouse 포트폴리오 사이트 개발 프로젝트와 마찬가지로 프로젝트 전과정을 단독으로 수행하였으며 코드 형상 관리를 위해 팀의 GitLab을 사용하였습니다.'
                         img={taxocr}
                     />
                 </TabPanel>
                 <TabPanel value={value} index={2} style={{ width: '90%' }}>
-                KSC2020
+                    <ProjectsDesc 
+                        title='한국정보과학회 KSC2020'
+                        name=''
+                    />
                 </TabPanel>
                 <TabPanel value={value} index={3} style={{ width: '90%' }}>
-                    <ProjectsDesc 
-                        title='정보과학회 KCC 2020' 
-                        name='가상화 환경에서의 NUMA 기반 락 성능 분석' 
-                        period='2020.04-2020.06' 
+                    <ProjectsDesc
+                        title='한국정보과학회 KCC 2020'
+                        name='가상화 환경에서의 NUMA 기반 락 성능 분석'
+                        period='2020.04 - 2020.06'
                         contribution='실험 및 논문 작성'
                         extraTitle='원문보기'
                         extraContent='https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09874330'
@@ -135,9 +143,22 @@ export default function Projects() {
                 </TabPanel>
                 <TabPanel value={value} index={4} style={{ width: '90%' }}>
                     <ProjectsDesc 
+                        title='2020 운영체제 프로젝트'
+                        name='Virtual Memory Management 기법 구현'
+                        period='2020.05'
+                        contribution='코드 작성'
+                        extraTitle='GitHub URL'
+                        extraContent='https://github.com/Seungyoonkim66/C-programming'
+                        desc='2020년도 1학기(4학년-1학기) 운영체제 수업에서 수행한 개인 프로젝트로, Demand paging system을 가정하고 이를 위한 페이지 replacement 기법을 C언어로 구현하였습니다. page reference string을 사용자에게 입력받아 MIN, FIFO, LRU, LFU, Working set 기법으로 처리했을 경우 memory residnece set의 변화 과정과 page fault 발생 과정을 추적 및 출력하는 프로그램을 구현하였습니다.'
+                        desc2='구현 코드는 github url을 통해 확인해주시기 바랍니다.'
+                        img={empty}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={5} style={{ width: '90%' }}>
+                    <ProjectsDesc
                         title='2020-1 소프트웨어공학개론 팀 프로젝트'
                         name='Nutrition Cart'
-                        period='2020.03-2020.-8'
+                        period='2020.03 - 2020.08'
                         contribution='백엔드 개발'
                         extraTitle='시연영상 및 발표자료'
                         extraContent='https://www.notion.so/2020-1-Nutrition-Cart-c5fb30ab60ae4dbfaf8fd838618d7570'
@@ -146,12 +167,12 @@ export default function Projects() {
                         img={NutritionCart}
                     />
                 </TabPanel>
-                <TabPanel value={value} index={5} style={{ width: '90%' }}>
+                <TabPanel value={value} index={6} style={{ width: '90%' }}>
                     <ProjectsDesc
                         title='2020 포스트 코로나 AI 챌린지'
                         name='ANTI-X'
                         period='2020.04'
-                        contribution='서비스 기획, UI 디자인 및 프로토타입 제작, PPT 제작'
+                        contribution='서비스 기획, UI 프로토타입 제작, PPT 제작'
                         extraTitle='Introduction PPT'
                         extraContent='https://www.notion.so/2020-AI-7283239c02924a48ad08e5d83a7bcedb'
                         desc='2020 포스트 코로나 AI 챌린지 공모전에 참가하여 기획한 맞춤형 감영병 확산 예측 및 확산 방지 솔루션 서비스입니다. 국가 또는 시기별 유행하는 감염병 정보를 제공하고, 사용자가 입력한 목적지와 경로의 감염 위험도 예측 정보를 제공하여 사용자의 외출에 대한 경고를 통해 감염병 확산 방지를 도모하는 어플리케이션입니다.'
@@ -159,8 +180,8 @@ export default function Projects() {
                         img={antix}
                     />
                 </TabPanel>
-                <TabPanel value={value} index={6} style={{ width: '90%' }}>
-                    <ProjectsDesc 
+                <TabPanel value={value} index={7} style={{ width: '90%' }}>
+                    <ProjectsDesc
                         title='성균융합원 2019 동계 R 부트캠프'
                         name='TwitchR(트위처)'
                         period='2020.01'
@@ -172,12 +193,12 @@ export default function Projects() {
                         img={TwitchR}
                     />
                 </TabPanel>
-                <TabPanel value={value} index={7} style={{ width: '70%' }}>
-                    <ProjectsDesc 
+                <TabPanel value={value} index={8} style={{ width: '90%' }}>
+                    <ProjectsDesc
                         title='2019 개방형 클라우드 플랫폼 PaaS-TA 기반 서비스 개발 및 아이디어 공모전'
                         name='누리자 복지'
-                        period='2020.10-2020.12'
-                        contribution='서비스 기획, UI 디자인 및 프로토타입 제작, PPT 제작'
+                        period='2020.10 - 2020.12'
+                        contribution='서비스 기획, UI 프로토타입 제작, PPT 제작'
                         extraTitle='Details'
                         extraContent='https://www.notion.so/PaaS-TA-a33e271f698740bab5e85203f0dba4de'
                         desc='Paas-TA 클라우드 플랫폼을 활용할 수 있는 서비스를 기획하는 공모전에 참가하여 관공서 문화센터간 파편화되어 있는 문화 강좌 정보, 이용자 정보, 실시간 수강신청 정보, 관공서 위치 정보, 수강 후기 정보를 통합하여 관리하고 서비스할 수 있는 어플리케이션 서비스를 기획했습니다. 클라우드 기술을 활용하여 공공기관의 서비스를 개선하고 여기서 활용되는 데이터를 수집할 수 있는 서비스를 UI 프로토타입과 함께 제안하였습니다.'
@@ -185,8 +206,31 @@ export default function Projects() {
                         img={paasta}
                     />
                 </TabPanel>
-                <TabPanel value={value} index={8} style={{ width: '70%' }}> 
-                    Item Seven
+                <TabPanel value={value} index={9} style={{ width: '90%' }}>
+                    <ProjectsDesc
+                        title='2019 웹 프로그래밍 실습 프로젝트'
+                        name='Kingo Market'
+                        period='2019.09 - 2010.12'
+                        contribution='프론트엔드 개발'
+                        extraTitle='GitHub URL'
+                        extraContent='https://github.com/Seungyoonkim66/Kingo-Market'
+                        desc='2019년도 2학기(3학년-2학기) 웹 프로그래밍 실습 수업에서 수행한 팀 프로젝트로, 판매자들은 판매할 상품을 올리고, 구매자는 상품을 장바구니에 담아 구매할 수 있는 웹 사이트를 개발했습니다. '
+                        desc2='Kingo Market은 Django 웹 프레임워크를 사용하여 개발하였고, 본 프로젝트에서 HTML, CSS를 활용하여 프론트엔드를 개발했습니다. 데이터베이스 ER Diagram과 상세한 기능 설명 및 구현 코드는 위 github repository에서 확인해주시기 바랍니다.'
+                        img={kingomarket}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={10} style={{ width: '90%' }}>
+                    <ProjectsDesc 
+                        title='2019 데이터베이스개론 프로젝트'
+                        name='SKKU Library'
+                        period='2019.09 - 2010.10'
+                        contribution='프론트엔드, 백엔드 개발'
+                        extraTitle='GitHub URL'
+                        extraContent='https://github.com/Seungyoonkim66/SKKU-library'
+                        desc='2019년도 2학기(3학년-2학기) 데이터베이스개론 수업에서 수행한 개인 프로젝트로 mySQL로 데이베이스를 구축 및 관리하고, HTML, CSS, PHP를 활용하여 프론트엔드를 개발하였습니다. SKKU Library는 회원가입, 로그이느 도서 대출 및 반납, 스터디룸 예약, 도서 리뷰 작성 등의 기능을 제공합니다.'
+                        desc2='데이터베이스 ER Diagram과 상세한 기능 설명 및 구현 코드는 github repository에서 확인해주시기 바랍니다.'
+                        img={skkulibrary}
+                    />
                 </TabPanel>
             </div>
         </div>
