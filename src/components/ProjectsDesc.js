@@ -1,8 +1,9 @@
 import React from 'react';
-
+import BackDrop from './BackDrop';
 import Divider from '@material-ui/core/Divider';
+import sample from '../static/empty.svg';
 
-export default function ProjectsDesc({ title, name, period, contribution, desc, desc2, extraTitle, extraContent, img }) {
+export default function ProjectsDesc({ title, name, period, contribution, desc, desc2, extraTitle, extraContent, img, btnTitle }) {
 
     return (
         <div className='projects-content-div'>
@@ -26,16 +27,14 @@ export default function ProjectsDesc({ title, name, period, contribution, desc, 
                         <th>{extraTitle}</th>
                         <td><a href={extraContent} target='blank'>{extraContent}</a></td>
                     </tr>
-                    
                 </table>
             </div>
-
             <Divider />
-
-            <div className='projects-content-div-desc'> 
+            <div className='projects-content-div-desc'>
                 <p>{desc}</p>
                 <p>{desc2}</p>
-                <img src={img} alt='img' style={{width: '90%', display: 'block', margin: 'auto'}}/>
+                <BackDrop img={img} btnTitle={btnTitle} isButtonShown='1'/>
+                {/* <img src={img} alt='img' style={{width: '90%', display: 'block', margin: 'auto'}}/> */}
             </div>
         </div>
     );
