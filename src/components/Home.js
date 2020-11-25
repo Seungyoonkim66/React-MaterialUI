@@ -16,6 +16,9 @@ const useStyles = makeStyles({
     introText1: {
         color: '#8F8A8E',
     },
+    introText2: {
+        color: '#e63946',
+    },
 });
 
 export default function Home() {
@@ -26,7 +29,7 @@ export default function Home() {
             <div className={classes.introTextDiv}>
                     <Typography className={classes.introText1} variant='h1' >Welcome,</Typography>
                     <Typography className={classes.introText1} variant='h2' >This is</Typography>
-                    <Typography className={classes.introText1} variant='h2'>Seungyoon's Portfolio</Typography>
+                    <Typography className={classes.introText2} variant='h2'>Seungyoon's Portfolio</Typography>
                 </div>
             </div>
     );

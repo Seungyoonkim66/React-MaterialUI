@@ -33,7 +33,7 @@ export default function ProjectsDesc({ title, name, period, contribution, desc, 
             <div className='projects-content-div-desc'>
                 <p>{desc}</p>
                 <p>{desc2}</p>
-                {isShown ? <BackDrop img={img} btnTitle={btnTitle}/> : null}
+                <p style={{marginBottom:'10%'}}>{isShown ? <BackDrop img={img} btnTitle={btnTitle}/> : null}</p>
                 {/* <BackDrop img={img} btnTitle={btnTitle} isButtonShown={true}/> */}
                 {/* <img src={img} alt='img' style={{width: '90%', display: 'block', margin: 'auto'}}/> */}
             </div>

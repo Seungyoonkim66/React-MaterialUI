@@ -52,7 +52,7 @@
 }
 .projects-content-div-desc{
     height: 43vh;
-    overflow: auto;
+    overflow-y: auto;
 }
 .projects-content-div-desc::-webkit-scrollbar{ width: 5px }
 .projects-content-div-desc::-webkit-scrollbar-track{ background-color: white;}
